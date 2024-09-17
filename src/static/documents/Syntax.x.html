@@ -32,13 +32,13 @@
           <!-- Use article element for main content -->
           <h2> Introduction to LEAN: Syntax</h2>
           <p> 
-            We start by learning the syntax of propositional logic in LEAN. The syntax can be understood as the grammar of the language. 
+            We start by learning the syntax of the language $\mathcal{L}_1$ of propositional logic in LEAN. The syntax can be understood as the grammar of the language. 
   
           </p>
           <p>
             We denote sentence letters in the language of propositional logic by P,Q,R. 
-            All sentence letters are sentences and if $\phi, \psi$ are sentences then $\neg \phi, \phi \land \psi, \phi \lor \psi, \phi \rightarrow \psi, \phi \leftrightarrow \psi$ 
-            are also sentences in the language of propositional logic. In LEAN, sentence letters are of the type proposition or Prop. A proposition is a sentence letter which has a truth value. 
+            All sentence letters are sentences and if $\phi, \psi$ are sentences then $\neg \phi, (\phi \land \psi), (\phi \lor \psi), (\phi \rightarrow \psi), (\phi \leftrightarrow \psi)$ 
+            are also sentences in the language of propositional logic. In LEAN, sentence letters are of the type proposition or $\mathrm{Prop}$. A proposition is a sentence letter which has a truth value. 
           </p>
           <p>
             Now how can we write these sentences in LEAN?   
@@ -61,7 +61,7 @@
                     <p><u>in English</u></p>
                     </td>
                   <td>
-                    <p><u>symbol used</u></p>
+                    <p><u>$\mathcal{L}_1$-symbol</u></p>
                   </td>
                   <td>
                     <p><u>LEAN syntax</u></p>
@@ -75,7 +75,7 @@
                     <p>or </p>
                   </td>
                   <td>
-                    <p>∨</p>
+                    <p>$\vee$</p>
                     </td>
                   <td>
                     <p>\or</p>
@@ -89,7 +89,7 @@
                     <p> and </p>
                   </td>
                   <td>
-                    <p>∧</p>
+                    <p>$\land$</p>
                     </td>
                   <td>
                     <p>\and</p>
@@ -103,7 +103,7 @@
                     <p>it is not the case that </p>
                   </td>
                   <td>
-                    <p>￢</p>
+                    <p>$\neg$</p>
                     </td>
                   <td>
                     <p>\not, \neg</p>
@@ -117,7 +117,7 @@
                     <p>if ... then </p>
                   </td>
                   <td>
-                    <p>→</p>
+                    <p>$\rightarrow$</p>
                     </td>
                   <td>
                     <p>\to, \r, \imp </p>
@@ -131,7 +131,7 @@
                     <p>if and only if </p>
                   </td>
                   <td>
-                    <p>↔︎</p>
+                    <p>$\leftrightarrow$</p>
                     </td>
                   <td>
                     <p>\iff, \lr</p>
@@ -141,9 +141,9 @@
             </table>
     <h3>LEAN editor</h3>
     <p>
-      On the right side of the screen you can see the LEAN editor. It is split into two. In the upper half you can see code already and there you code yourself. 
-      In the lower half you see two displays: "mathlib-demo.lean:X.X" and "All Messages(X)". "mathlib-demo.lean:X.X" evaluates and verifies the code you click on. 
-      If you click in the upper half of the editor for example on line $3$ $(\#\text{check }P\lor Q)$,  you can see that under "mathlib-demo.lean:X.X" two messages appear. If you open "Expected type" it will say P,Q are Prop (propositions), so LEAN expects to output a Prop.
+      On the right side of the screen you can see the LEAN editor. It is split into two. In the upper half you can see some code already; <i>this is the place where you input you code</i>. <br>
+      The lower half is where LEAN tells you (a) what it expects from you, (b) whether your input is the correct one (both for the line you're working on and for the entire code).</p>
+      <p>More specifically, in the lower part you see a list with two main entries: "mathlib-demo.lean:X.X" and "All Messages(X)". "mathlib-demo.lean:X.X" evaluates and verifies the code you click on. If you click in the upper half of the editor for example on line $3$ $(\#\text{check }P\lor Q)$,  you can see that under "mathlib-demo.lean:X.X" two messages appear. If you open "Expected type" it will say P,Q are Prop (propositions), so LEAN expects to output a Prop.
       Under "Messages", you can see $P\lor Q$ is a Prop, as expected. The section "mathlib-demo.lean:X.X" displays the messages for the code that you work on, whereas if you open "All Messages", it will show messages for all the code written in the editor.
       #check evaluates the type of the expression. Try writing some more complex expressions using $P$ and $Q$!  
       </p>  
@@ -151,8 +151,9 @@
 
     <h3>Brackets</h3>
     <p>
-    The Logic Manual defines conventions concerning brackets for compound sentences in section $2.3$. LEAN has its own conventions. It evaluates sentences from left to right and will assume brackets from left to right if you do not specify them. 
-    For example, if you input $P \land \neg P \lor Q$, LEAN will evaluate $(P \land \neg P) \lor Q$ automatically. If you want to evaluate $P \land (\neg P \lor Q)$ you have to specify the brackets.
+    The Logic Manual introduces conventions for dropping brackets for compound sentences in section $2.3$. LEAN has its own conventions. It evaluates sentences from left to right and will assume brackets from left to right if you do not specify them.<br>
+     <i>Note that you can keep using the abbreviations from the Logic Manual. Rest assured LEAN will evaluate correctly your input. However, it's recommended to start using non-abbreviated inputs first</i>.<br>
+    <i>Example:</i> if you input $P \land \neg P \lor Q$, LEAN will evaluate $(P \land \neg P) \lor Q$ automatically. If you want to evaluate $P \land (\neg P \lor Q)$ you have to specify the brackets.
       </p>
 </body>
 </html>
