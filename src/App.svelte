@@ -11,6 +11,7 @@
     import Negation from './static/documents/Negation.x.html'
     import Semantics from './static/documents/Semantics.x.html'
     import Welcome from './static/documents/Welcomepage.x.html'
+    import NaturalDeduction from './static/documents/NaturalDeduction.x.html'
 
 
     import CombinedRulesT from './static/exercises/CombinedRules.txt'
@@ -21,6 +22,7 @@
     import NegationT from './static/exercises/Negation.txt'
     import SemanticsT from './static/exercises/Semantics.txt'
     import WelcomeT from './static/exercises/Welcome.txt'
+    import NaturalT from './static/exercises/NaturalDeduction.txt'
 
     let map = new Map();
     map.set("CombinedRules", [ CombinedRules, CombinedRulesT ])
@@ -31,6 +33,7 @@
     map.set("Semantics", [Semantics, SemanticsT])
     map.set("Negation", [ Negation, NegationT ])
     map.set("Welcome", [Welcome, WelcomeT ])
+    map.set("NaturalD", [NaturalDeduction, NaturalT])
     //console.log("NegationT is : " + NegationT);
     let selectedDocument = Welcome;
   let editorText = WelcomeT;//This sets text in editor and updates lean web editor component

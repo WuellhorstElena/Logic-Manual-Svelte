@@ -16,15 +16,17 @@
           <li><a href="#" on:click={() => event("Welcome")}>Welcome</a></li>
       </ul>
       <h5 class="sidebar-title">Propositional Logic</h5>
-      <h5 class="sidebar-subtitle"><a href="#" on:click={() => event("Syntax")}>Syntax</a></h5>
-      <h5 class="sidebar-subtitle"><a href="#" on:click={() => event("Semantics")}>Semantics</a></h5>
-      <h5 class="sidebar-subtitle"><a href="">Natural deduction</a></h5>
       <ul>
-          <li><a href="#" on:click={() => event("Conjunction")}>Conjunction</a></li>
-          <li><a href="#" on:click={() => event("Conditional")}>Conditional</a></li>
-          <li><a href="#" on:click={() => event("Disjunction")}>Disjunction</a></li>
-          <li><a href="#" on:click={() => event("Negation")}>Negation</a></li>
-          <li><a href="#" on:click={() => event("CombinedRules")}>Combinations</a></li>
+      <li ><a href="#" on:click={() => event("Syntax")}>Syntax</a></li>
+      <li ><a href="#" on:click={() => event("Semantics")}>Semantics</a></li>
+      <li ><a href="#"on:click={() => event("NaturalD")}>Natural deduction</a></li>
+      </ul>
+      <ul>
+          <li class="sidebar-subgroup"><a href="#" on:click={() => event("Conjunction")}>Conjunction</a></li>
+          <li class="sidebar-subgroup"><a href="#" on:click={() => event("Conditional")}>Conditional</a></li>
+          <li class="sidebar-subgroup"><a href="#" on:click={() => event("Disjunction")}>Disjunction</a></li>
+          <li class="sidebar-subgroup"><a href="#" on:click={() => event("Negation")}>Negation</a></li>
+          <li class="sidebar-subgroup"><a href="#" on:click={() => event("CombinedRules")}>Combinations</a></li>
       </ul>
   </div>
 </div>
@@ -55,13 +57,13 @@
       padding: 8px 16px;
   }
 
-  .sidebar-subtitle {
-      font-size: 17px; /* Adjust font size as needed */
+  .sidebar-subgroup {
+      font-size: 15px; /* Adjust font size as needed */
 	font-style: italic;
 	font-weight: normal;
       text-align: left;
       margin: 10px 0;
-      padding: 8px 16px;
+      padding: 8px 10px;
       
   }
 
